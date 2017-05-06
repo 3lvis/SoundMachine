@@ -14,6 +14,8 @@ class Controller: UICollectionViewController {
         sounds.append(Sound(title: "🐛", soundFilename: "crickets"))
         sounds.append(Sound(title: "🔫", soundFilename: "pew"))
         sounds.append(Sound(title: "👎", soundFilename: "sad-trombone"))
+        sounds.append(Sound(title: "👶", soundFilename: "born"))
+        sounds.append(Sound(title: "🥁", soundFilename: "punchline"))
 
         return sounds
     }()
@@ -21,9 +23,9 @@ class Controller: UICollectionViewController {
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = CGSize(width: 80, height: 80)
-        layout.minimumInteritemSpacing = 15
-        layout.minimumLineSpacing = 15
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        layout.minimumInteritemSpacing = 20
+        layout.minimumLineSpacing = 20
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
 
         super.init(collectionViewLayout: layout)
     }
@@ -40,7 +42,7 @@ class Controller: UICollectionViewController {
         self.collectionView?.backgroundView = UIImageView(image: UIImage(named: "background")!)
         self.collectionView?.backgroundColor = .red
         self.collectionView?.register(Cell.self, forCellWithReuseIdentifier: Cell.reuseIdentifier)
-        self.collectionView?.contentInset = UIEdgeInsets(top: 350, left: 0, bottom: 0, right: 0)
+        self.collectionView?.contentInset = UIEdgeInsets(top: 340, left: 0, bottom: 0, right: 0)
     }
 
     func play(sound: Sound) {
