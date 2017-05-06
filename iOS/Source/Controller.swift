@@ -20,6 +20,10 @@ class Controller: UICollectionViewController {
         return sounds
     }()
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = CGSize(width: 80, height: 80)
@@ -76,4 +80,6 @@ class Controller: UICollectionViewController {
         let sound = self.sounds[indexPath.row]
         self.play(sound: sound)
     }
+
+
 }
