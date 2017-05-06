@@ -4,7 +4,16 @@ import AVFoundation
 class Controller: UICollectionViewController {
     lazy var sounds: [Sound] = {
         var sounds = [Sound]()
-        sounds.append(Sound(title: "", soundFilename: ""))
+        sounds.append(Sound(title: "👋", soundFilename: "bye"))
+        sounds.append(Sound(title: "🌬", soundFilename: "fart"))
+        sounds.append(Sound(title: "👄", soundFilename: "female-voice"))
+        sounds.append(Sound(title: "👻", soundFilename: "scream"))
+        sounds.append(Sound(title: "💋", soundFilename: "sugar-voice"))
+        sounds.append(Sound(title: "🚽", soundFilename: "toilet"))
+        sounds.append(Sound(title: "🚂", soundFilename: "train"))
+        sounds.append(Sound(title: "🐛", soundFilename: "crickets"))
+        sounds.append(Sound(title: "🔫", soundFilename: "pew"))
+        sounds.append(Sound(title: "👎", soundFilename: "sad-trombone"))
 
         return sounds
     }()

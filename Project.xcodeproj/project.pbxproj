@@ -7,17 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		143635C41EBE343E004E4A14 /* bye.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 143635BD1EBE343D004E4A14 /* bye.mp3 */; };
+		143635C51EBE343E004E4A14 /* fart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 143635BE1EBE343D004E4A14 /* fart.mp3 */; };
+		143635C61EBE343E004E4A14 /* female-voice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 143635BF1EBE343D004E4A14 /* female-voice.mp3 */; };
+		143635C71EBE343E004E4A14 /* scream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 143635C01EBE343D004E4A14 /* scream.mp3 */; };
+		143635C81EBE343E004E4A14 /* sugar-voice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 143635C11EBE343D004E4A14 /* sugar-voice.mp3 */; };
+		143635C91EBE343E004E4A14 /* toilet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 143635C21EBE343D004E4A14 /* toilet.mp3 */; };
+		143635CA1EBE343E004E4A14 /* train.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 143635C31EBE343E004E4A14 /* train.mp3 */; };
+		143635CE1EBE36D6004E4A14 /* crickets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 143635CB1EBE36D6004E4A14 /* crickets.mp3 */; };
+		143635CF1EBE36D6004E4A14 /* pew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 143635CC1EBE36D6004E4A14 /* pew.mp3 */; };
+		143635D01EBE36D6004E4A14 /* sad-trombone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 143635CD1EBE36D6004E4A14 /* sad-trombone.mp3 */; };
 		146E27A91BCD51F200959BBA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146E279F1BCD51F200959BBA /* LaunchScreen.xib */; };
 		146E27AA1BCD51F200959BBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146E27A11BCD51F200959BBA /* Images.xcassets */; };
 		1483128E1B92C11500266943 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483128D1B92C11500266943 /* Tests.swift */; };
 		14FC05A61EBE175400E437F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC05A51EBE175400E437F5 /* AppDelegate.swift */; };
 		14FC05A81EBE176F00E437F5 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC05A71EBE176F00E437F5 /* Controller.swift */; };
 		14FC05AE1EBE191B00E437F5 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC05AD1EBE191B00E437F5 /* Cell.swift */; };
-		14FC05B11EBE284F00E437F5 /* superman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14FC05B01EBE284F00E437F5 /* superman.mp3 */; };
 		14FC05B31EBE29C600E437F5 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC05B21EBE29C600E437F5 /* Sound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		143635BD1EBE343D004E4A14 /* bye.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bye.mp3; sourceTree = "<group>"; };
+		143635BE1EBE343D004E4A14 /* fart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fart.mp3; sourceTree = "<group>"; };
+		143635BF1EBE343D004E4A14 /* female-voice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "female-voice.mp3"; sourceTree = "<group>"; };
+		143635C01EBE343D004E4A14 /* scream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scream.mp3; sourceTree = "<group>"; };
+		143635C11EBE343D004E4A14 /* sugar-voice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sugar-voice.mp3"; sourceTree = "<group>"; };
+		143635C21EBE343D004E4A14 /* toilet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = toilet.mp3; sourceTree = "<group>"; };
+		143635C31EBE343E004E4A14 /* train.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = train.mp3; sourceTree = "<group>"; };
+		143635CB1EBE36D6004E4A14 /* crickets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crickets.mp3; sourceTree = "<group>"; };
+		143635CC1EBE36D6004E4A14 /* pew.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pew.mp3; sourceTree = "<group>"; };
+		143635CD1EBE36D6004E4A14 /* sad-trombone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sad-trombone.mp3"; sourceTree = "<group>"; };
 		146E27891BCD51C800959BBA /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		146E27A01BCD51F200959BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		146E27A11BCD51F200959BBA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -28,7 +47,6 @@
 		14FC05A51EBE175400E437F5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14FC05A71EBE176F00E437F5 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		14FC05AD1EBE191B00E437F5 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		14FC05B01EBE284F00E437F5 /* superman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = superman.mp3; sourceTree = "<group>"; };
 		14FC05B21EBE29C600E437F5 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +129,16 @@
 		14FC05AF1EBE284F00E437F5 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				14FC05B01EBE284F00E437F5 /* superman.mp3 */,
+				143635BD1EBE343D004E4A14 /* bye.mp3 */,
+				143635BE1EBE343D004E4A14 /* fart.mp3 */,
+				143635BF1EBE343D004E4A14 /* female-voice.mp3 */,
+				143635C01EBE343D004E4A14 /* scream.mp3 */,
+				143635C11EBE343D004E4A14 /* sugar-voice.mp3 */,
+				143635C21EBE343D004E4A14 /* toilet.mp3 */,
+				143635C31EBE343E004E4A14 /* train.mp3 */,
+				143635CB1EBE36D6004E4A14 /* crickets.mp3 */,
+				143635CC1EBE36D6004E4A14 /* pew.mp3 */,
+				143635CD1EBE36D6004E4A14 /* sad-trombone.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -202,8 +229,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				146E27AA1BCD51F200959BBA /* Images.xcassets in Resources */,
+				143635D01EBE36D6004E4A14 /* sad-trombone.mp3 in Resources */,
+				143635CA1EBE343E004E4A14 /* train.mp3 in Resources */,
+				143635C51EBE343E004E4A14 /* fart.mp3 in Resources */,
+				143635C81EBE343E004E4A14 /* sugar-voice.mp3 in Resources */,
+				143635CE1EBE36D6004E4A14 /* crickets.mp3 in Resources */,
+				143635CF1EBE36D6004E4A14 /* pew.mp3 in Resources */,
+				143635C41EBE343E004E4A14 /* bye.mp3 in Resources */,
+				143635C91EBE343E004E4A14 /* toilet.mp3 in Resources */,
+				143635C71EBE343E004E4A14 /* scream.mp3 in Resources */,
+				143635C61EBE343E004E4A14 /* female-voice.mp3 in Resources */,
 				146E27A91BCD51F200959BBA /* LaunchScreen.xib in Resources */,
-				14FC05B11EBE284F00E437F5 /* superman.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
