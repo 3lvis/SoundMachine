@@ -1,6 +1,6 @@
-# PROJECT_NAME
+# The Sexy Sound Machine
 
-PROJECT_DESCRIPTION
+An app to play sound effects, perfect for small gatherings.
 
 ## Running the project
 
