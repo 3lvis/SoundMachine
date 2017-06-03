@@ -4,18 +4,16 @@ import AVFoundation
 class Controller: UICollectionViewController {
     lazy var sounds: [Sound] = {
         var sounds = [Sound]()
-        sounds.append(Sound(title: "👋", soundFilename: "bye"))
-        sounds.append(Sound(title: "🌬", soundFilename: "fart"))
-        sounds.append(Sound(title: "👄", soundFilename: "female-voice"))
-        sounds.append(Sound(title: "👻", soundFilename: "scream"))
-        sounds.append(Sound(title: "💋", soundFilename: "sugar-voice"))
-        sounds.append(Sound(title: "🚽", soundFilename: "toilet"))
-        sounds.append(Sound(title: "🚂", soundFilename: "train"))
-        sounds.append(Sound(title: "🐛", soundFilename: "crickets"))
-        sounds.append(Sound(title: "🔫", soundFilename: "pew"))
-        sounds.append(Sound(title: "👎", soundFilename: "sad-trombone"))
-        sounds.append(Sound(title: "👶", soundFilename: "born"))
-        sounds.append(Sound(title: "🥁", soundFilename: "punchline"))
+        sounds.append(Sound(title: "👋", soundFilename: "bye", color: .lightGray))
+        sounds.append(Sound(title: "🌬", soundFilename: "fart", color: .red))
+        sounds.append(Sound(title: "👄", soundFilename: "female-voice", color: .green))
+        sounds.append(Sound(title: "👻", soundFilename: "scream", color: .blue))
+        sounds.append(Sound(title: "💋", soundFilename: "sugar-voice", color: .cyan))
+        sounds.append(Sound(title: "🚽", soundFilename: "toilet", color: .yellow))
+        sounds.append(Sound(title: "🚂", soundFilename: "train", color: .magenta))
+        sounds.append(Sound(title: "🔫", soundFilename: "pew", color: .purple))
+        sounds.append(Sound(title: "👎", soundFilename: "sad-trombone", color: .brown))
+        sounds.append(Sound(title: "🥁", soundFilename: "punchline", color: .orange))
 
         return sounds
     }()
@@ -43,10 +41,9 @@ class Controller: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.collectionView?.backgroundView = UIImageView(image: UIImage(named: "background")!)
-        self.collectionView?.backgroundColor = .red
+        self.collectionView?.backgroundColor = .black
         self.collectionView?.register(Cell.self, forCellWithReuseIdentifier: Cell.reuseIdentifier)
-        self.collectionView?.contentInset = UIEdgeInsets(top: 340, left: 0, bottom: 0, right: 0)
+        self.collectionView?.contentInset = UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0)
     }
 
     func play(sound: Sound) {
@@ -72,6 +69,7 @@ class Controller: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.reuseIdentifier, for: indexPath) as! Cell
         let sound = self.sounds[indexPath.row]
         cell.title = sound.title
+        cell.color = sound.color
 
         return cell
     }
