@@ -54,6 +54,7 @@ class Controller: UICollectionViewController {
             let url = Bundle.main.url(forResource: sound.soundFilename, withExtension: "mp3")!
             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
             player?.play()
+            player?.delegate = self
         } catch let error as NSError {
             let controller = UIAlertController(title: NSLocalizedString("Oops, something went wrong", comment: ""), message: error.localizedDescription, preferredStyle: .alert)
             controller.addAction(UIAlertAction(title: NSLocalizedString("Dismiss", comment: ""), style: .cancel, handler: nil))
@@ -77,7 +78,14 @@ class Controller: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sound = self.sounds[indexPath.row]
         self.play(sound: sound)
+        self.collectionView?.backgroundColor = sound.color
     }
 
 
+}
+
+extension Controller: AVAudioPlayerDelegate {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        self.collectionView?.backgroundColor = .black
+    }
 }
