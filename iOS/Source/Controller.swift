@@ -4,16 +4,16 @@ import AVFoundation
 class Controller: UICollectionViewController {
     lazy var sounds: [Sound] = {
         var sounds = [Sound]()
-        sounds.append(Sound(title: "👋", soundFilename: "bye", color: .lightGray))
-        sounds.append(Sound(title: "🌬", soundFilename: "fart", color: .red))
-        sounds.append(Sound(title: "👄", soundFilename: "female-voice", color: .green))
-        sounds.append(Sound(title: "👻", soundFilename: "scream", color: .blue))
-        sounds.append(Sound(title: "💋", soundFilename: "sugar-voice", color: .cyan))
-        sounds.append(Sound(title: "🚽", soundFilename: "toilet", color: .yellow))
-        sounds.append(Sound(title: "🚂", soundFilename: "train", color: .magenta))
-        sounds.append(Sound(title: "🔫", soundFilename: "pew", color: .purple))
-        sounds.append(Sound(title: "👎", soundFilename: "sad-trombone", color: .brown))
-        sounds.append(Sound(title: "🥁", soundFilename: "punchline", color: .orange))
+        sounds.append(Sound(title: "👋", soundFilename: "bye", color: UIColor.lightGray.withAlphaComponent(0.5)))
+        sounds.append(Sound(title: "🌬", soundFilename: "fart", color: UIColor.red.withAlphaComponent(0.5)))
+        sounds.append(Sound(title: "👄", soundFilename: "female-voice", color: UIColor.green.withAlphaComponent(0.5)))
+        sounds.append(Sound(title: "👻", soundFilename: "scream", color: UIColor.blue.withAlphaComponent(0.5)))
+        sounds.append(Sound(title: "💋", soundFilename: "sugar-voice", color: UIColor.cyan.withAlphaComponent(0.5)))
+        sounds.append(Sound(title: "🚽", soundFilename: "toilet", color: UIColor.yellow.withAlphaComponent(0.5)))
+        sounds.append(Sound(title: "🚂", soundFilename: "train", color: UIColor.magenta.withAlphaComponent(0.5)))
+        sounds.append(Sound(title: "🔫", soundFilename: "pew", color: UIColor.purple.withAlphaComponent(0.5)))
+        sounds.append(Sound(title: "👎", soundFilename: "sad-trombone", color: UIColor.brown.withAlphaComponent(0.5)))
+        sounds.append(Sound(title: "🥁", soundFilename: "punchline", color: UIColor.orange.withAlphaComponent(0.5)))
 
         return sounds
     }()
@@ -52,7 +52,7 @@ class Controller: UICollectionViewController {
             try AVAudioSession.sharedInstance().setActive(true)
 
             let url = Bundle.main.url(forResource: sound.soundFilename, withExtension: "mp3")!
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
             player?.play()
             player?.delegate = self
         } catch let error as NSError {
@@ -79,9 +79,13 @@ class Controller: UICollectionViewController {
         let sound = self.sounds[indexPath.row]
         self.play(sound: sound)
         self.collectionView?.backgroundColor = sound.color
+
+        // Create circular layer that grows out of the tapped cell
+        // Since now a sound gets played by cancelling the previous one
+        // We don't need to handling having several circular layers on top of each other
+        // by using translucency.
+        // let layer = CAShapeLayer()
     }
-
-
 }
 
 extension Controller: AVAudioPlayerDelegate {
